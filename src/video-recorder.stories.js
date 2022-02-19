@@ -91,8 +91,20 @@ stories.add(
   () => (
     <VideoRecorder
       isOnInitially
-      showReplayControls
       replayVideoAutoplayAndLoopOff
+      isReplayVideoInitiallyMuted={false}
+      {...actionLoggers}
+    />
+  )
+)
+
+stories.add(
+  'with showReplayControls=true replayVideoAutoplayAndLoopOff=false',
+  () => (
+    <VideoRecorder
+      isOnInitially
+      showReplayControls
+      replayVideoAutoplayAndLoopOff={false}
       isReplayVideoInitiallyMuted={false}
       {...actionLoggers}
     />

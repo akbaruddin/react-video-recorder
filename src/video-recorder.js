@@ -167,7 +167,8 @@ export default class VideoRecorder extends Component {
     isVideoInputSupported: null,
     stream: undefined,
     currentDeviceId: null,
-    availableDeviceIds: []
+    availableDeviceIds: [],
+    paused: true
   }
 
   componentDidMount () {
@@ -711,6 +712,9 @@ export default class VideoRecorder extends Component {
   handleReplayVideoClick = () => {
     if (this.replayVideo.paused && !this.props.showReplayControls) {
       this.replayVideo.play()
+      this.setState({
+        paused: false
+      })
     }
 
     // fixes bug where seeking control during autoplay is not available until the video is almost completely played through
@@ -719,6 +723,21 @@ export default class VideoRecorder extends Component {
         isReplayVideoMuted: !this.state.isReplayVideoMuted
       })
     }
+  }
+
+  handleStopVideoClick = () => {
+    if (!this.replayVideo.paused && !this.props.showReplayControls) {
+      this.replayVideo.pause()
+      this.setState({
+        paused: true
+      })
+    }
+  }
+
+  handleVideoEndEvent = () => {
+    this.setState({
+      paused: true
+    })
   }
 
   renderCameraView () {
@@ -781,6 +800,7 @@ export default class VideoRecorder extends Component {
             onDurationChange={this.handleDurationChange}
             controlsList={videoControlsList}
             disablePictureInPicture={disablePictureInPicture}
+            onEnded={this.handleVideoEndEvent}
           />
           {videoInput}
         </CameraView>
@@ -872,7 +892,9 @@ export default class VideoRecorder extends Component {
           showReplayControls,
           replayVideoAutoplayAndLoopOff,
           useVideoInput,
-
+          handleReplayVideoClick: this.handleReplayVideoClick,
+          handleStopVideoClick: this.handleStopVideoClick,
+          playStatus: this.state.paused,
           onTurnOnCamera: () => this.turnOnCamera(),
           onSwitchCamera: this.handleSwitchCamera,
           onTurnOffCamera: this.turnOffCamera,

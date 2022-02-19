@@ -23,4 +23,13 @@ Button.defaultProps = {
   backgroundColor: 'white'
 }
 
+export const ButtonTransparent = styled.button`
+  background: transparent;
+  height: 40px;
+  padding: 0px 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+`
+
 export default Button

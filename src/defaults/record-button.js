@@ -5,16 +5,13 @@ import PropTypes from 'prop-types'
 const Button = styled.button`
   background: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  background: rgba(227, 73, 28, 0.8);
+  background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
   z-index: 5;
-  :hover {
-    background: #fb6d42;
+  svg:hover circle {
+    fill: #fb6d42;
   }
 `
 
@@ -24,26 +21,7 @@ const RecWrapper = styled.div`
   align-items: center;
 `
 
-const ButtonBorder = styled.div`
-  border: 8px solid rgba(255, 255, 255, 0.4);
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-`
-const Instructions = styled.div`
-  font-family: Arial;
-  font-size: 14px;
-  color: #ffffff;
-  letter-spacing: 1.75px;
-  display: flex;
-  margin-bottom: 20px;
-`
-
-const InstuctionsHighlight = styled.div`
-  font-weight: 700;
-  color: #dc6547;
-  padding: 0 5px;
-`
+const ButtonBorder = styled.div``
 
 Button.defaultProps = {
   color: 'black',
@@ -52,14 +30,16 @@ Button.defaultProps = {
 
 const RecordButton = ({ t, ...props }) => (
   <RecWrapper>
-    <Instructions>
-      <div>{t('PRESS')} </div>
-      <InstuctionsHighlight> {t('REC')} </InstuctionsHighlight>
-      {t('WHEN READY')}
-    </Instructions>
-
     <ButtonBorder>
-      <Button {...props} />
+      <Button {...props} title={`${t('PRESS')} ${t('REC')} ${t('WHEN READY')}`}>
+        <svg
+          width={40}
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 512 512'
+        >
+          <circle cx='256' cy='256' r='256' fill='rgba(227, 73, 28, 0.8)' />
+        </svg>
+      </Button>
     </ButtonBorder>
   </RecWrapper>
 )
