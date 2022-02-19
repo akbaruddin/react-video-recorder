@@ -1,5 +1,5 @@
 {
-  "name": "react-video-recorder",
+  "name": "react-video-recorder-custom",
   "main": "lib",
   "files": [
     "lib",
@@ -96,7 +96,7 @@
   "version": "0.0.0-development",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbaiodias/react-video-recorder.git"
+    "url": "https://github.com/akbaruddin/react-video-recorder.git"
   },
   "license": "MIT"
 }

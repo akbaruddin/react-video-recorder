@@ -21,7 +21,7 @@ import VideoRecorder from 'react-video-recorder'
 
 const App = () => (
   <VideoRecorder
-    onRecordingComplete={videoBlob => {
+    onRecordingComplete={(videoBlob) => {
       // Do something with the video...
       console.log('videoBlob', videoBlob)
     }}
@@ -30,8 +30,6 @@ const App = () => (
 
 render(<App />, document.getElementById('root'))
 ```
-
-Also check the [Storybook](https://react-video-recorder.vercel.app/) for more demos and usage examples.
 
 **Note:** if you click the **"Show info"** button in the top-right corner, you should be able to see a table with the supported prop-types.
 
