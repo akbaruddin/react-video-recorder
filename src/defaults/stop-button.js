@@ -25,7 +25,7 @@ const Box = styled.div`
   width: 24px;
   height: 24px;
   border-radius: 4px;
-  background: #fff;
+  background: #d93025;
 `
 
 Button.defaultProps = {
