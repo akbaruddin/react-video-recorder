@@ -7,11 +7,18 @@ const Button = styled.button`
   color: ${(props) => props.color};
   background: transparent;
   outline: none;
-  border: none;
   cursor: pointer;
+  height: 56px;
+  width: 56px;
   z-index: 5;
-  svg:hover circle {
-    fill: #fb6d42;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
   }
 `
 
@@ -33,11 +40,11 @@ const RecordButton = ({ t, ...props }) => (
     <ButtonBorder>
       <Button {...props} title={`${t('PRESS')} ${t('REC')} ${t('WHEN READY')}`}>
         <svg
-          width={40}
+          width={24}
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 512 512'
         >
-          <circle cx='256' cy='256' r='256' fill='rgba(227, 73, 28, 0.8)' />
+          <circle cx='256' cy='256' r='256' fill='#fff' />
         </svg>
       </Button>
     </ButtonBorder>

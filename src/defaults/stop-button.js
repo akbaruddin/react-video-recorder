@@ -2,27 +2,30 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-  background: ${(props) => props.backgroundColor};
-  color: ${(props) => props.color};
-  border-radius: 4px;
-  width: 40px;
-  height: 40px;
-  background: rgba(227, 73, 28, 0.8);
-  outline: none;
-  border: none;
+  background: transparent;
+  height: 56px;
+  width: 56px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  margin: 20px;
+  outline: none;
+  padding: 5px;
 
   :hover {
-    background: #fb6d42;
+    background: rgba(255, 255, 255, 0.4);
   }
 `
 
-const Border = styled.div`
-  background: rgba(255, 255, 255, 0.4);
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
+const Box = styled.div`
+  background: ${(props) => props.backgroundColor};
+  color: ${(props) => props.color};
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #fff;
 `
 
 Button.defaultProps = {
@@ -31,7 +34,7 @@ Button.defaultProps = {
 }
 
 export default (props) => (
-  <Border>
-    <Button {...props} />
-  </Border>
+  <Button {...props}>
+    <Box />
+  </Button>
 )
