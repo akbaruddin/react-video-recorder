@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Button, { ButtonTransparent } from './button'
+import Button, { ButtonTransparent, ButtonRound } from './button'
 import RecordButton from './record-button'
 import StopButton from './stop-button'
 import Timer from './timer'
@@ -152,13 +152,21 @@ const Actions = ({
     }
 
     return shouldUseVideoInput ? (
-      <Button type='button' onClick={onOpenVideoInput} data-qa='open-input'>
+      <ButtonRound
+        type='button'
+        onClick={onOpenVideoInput}
+        data-qa='open-input'
+      >
         {t('Record a video')}
-      </Button>
+      </ButtonRound>
     ) : (
-      <Button type='button' onClick={onTurnOnCamera} data-qa='turn-on-camera'>
+      <ButtonRound
+        type='button'
+        onClick={onTurnOnCamera}
+        data-qa='turn-on-camera'
+      >
         {t('Turn my camera ON')}
-      </Button>
+      </ButtonRound>
     )
   }
 

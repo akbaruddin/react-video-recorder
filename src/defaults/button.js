@@ -20,6 +20,21 @@ const Button = styled.button`
   }
 `
 
+export const ButtonRound = styled.button`
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  outline: 0;
+  padding: 5px 12px;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+`
+
 Button.defaultProps = {
   color: 'black',
   backgroundColor: 'white'
