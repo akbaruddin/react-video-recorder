@@ -92,7 +92,7 @@
     "start-server-and-test": "^1.7.11",
     "styled-components": "4"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/akbaruddin/react-video-recorder.git"

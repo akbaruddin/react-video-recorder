@@ -130,7 +130,8 @@ export default class VideoRecorder extends Component {
     onRecordingComplete: PropTypes.func,
     onOpenVideoInput: PropTypes.func,
     onStopReplaying: PropTypes.func,
-    onError: PropTypes.func
+    onError: PropTypes.func,
+    onCheckEnd: PropTypes.func
   }
 
   static defaultProps = {
@@ -145,7 +146,8 @@ export default class VideoRecorder extends Component {
     countdownTime: 3000,
     constraints: CONSTRAINTS,
     chunkSize: 250,
-    dataAvailableTimeout: 500
+    dataAvailableTimeout: 500,
+    onCheckEnd: () => {}
   }
 
   videoInput = React.createRef()
@@ -738,6 +740,7 @@ export default class VideoRecorder extends Component {
     this.setState({
       paused: true
     })
+    this.props.onCheckEnd()
   }
 
   renderCameraView () {
