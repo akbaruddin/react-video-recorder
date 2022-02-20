@@ -14,7 +14,6 @@
     "clean": "rm -rf lib",
     "build": "babel src -d lib --copy-files --ignore **/*.stories.js,**/*.test.js,**/*.browser-test.js",
     "build:watch": "babel --watch src -d lib --copy-files --ignore **/*.stories.js,**/*.test.js,**/*.browser-test.js",
-    "prebuild": "yarn run clean",
     "prepublish": "set NODE_ENV=production yarn run build",
     "start": "yarn run storybook",
     "storybook": "start-storybook -p 6006",
@@ -93,7 +92,7 @@
     "start-server-and-test": "^1.7.11",
     "styled-components": "4"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/akbaruddin/react-video-recorder.git"
