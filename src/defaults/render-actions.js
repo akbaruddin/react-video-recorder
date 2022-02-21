@@ -21,19 +21,19 @@ const ActionMainWrapper = styled.div`
   padding: 10px;
 `
 
-const TestButton = styled.button`
-  border: 0;
-  background: #de9f3b;
-  border-radius: 15px;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1;
-  padding: 12px 30px;
-  font-weight: 600;
-  width: 140px;
-  height: 40px;
-  position: absolute;
-`
+// const TestButton = styled.button`
+//   border: 0;
+//   background: #de9f3b;
+//   border-radius: 15px;
+//   color: #fff;
+//   font-size: 16px;
+//   line-height: 1;
+//   padding: 12px 30px;
+//   font-weight: 600;
+//   width: 140px;
+//   height: 40px;
+//   position: absolute;
+// `
 
 const Actions = ({
   t,
@@ -186,16 +186,18 @@ const Actions = ({
 
   return (
     <>
-      {!isRecording && !isRunningCountdown && isCameraOn && streamIsReady && (
-        <TestButton
-          t={t}
-          type='button'
-          onClick={onStartRecording}
-          data-qa='start-recording'
-        >
-          Test Video
-        </TestButton>
-      )}
+      {/*
+        {!isRecording && !isRunningCountdown && isCameraOn && streamIsReady && (
+          <TestButton
+            t={t}
+            type='button'
+            onClick={onStartRecording}
+            data-qa='start-recording'
+          >
+            Test Video
+          </TestButton>
+        )}
+        */}
       <ActionMainWrapper>
         {isRecording && <Timer timeLimit={timeLimit} />}
         {isRunningCountdown && <Countdown countdownTime={countdownTime} />}
