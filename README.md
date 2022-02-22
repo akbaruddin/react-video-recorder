@@ -1,23 +1,23 @@
-# react-video-recorder
+# react-video-recorder-custom
 
 ## Installation
 
 ```sh
-yarn add react-video-recorder
+yarn add react-video-recorder-custom
 
 # Note: this project has react, react-dom, prop-types & styled-components as peerDependencies,
 #       so if you're starting from scratch run this instead:
-yarn add react-video-recorder react react-dom prop-types styled-components
+yarn add react-video-recorder-custom react react-dom prop-types styled-components
 ```
 
 ## Usage
 
-Basic usage [(edit in stakblitz)](https://stackblitz.com/edit/react-video-recorder-demo):
+Basic usage:
 
-```js
+```jsx
 import React from 'react'
 import { render } from 'react-dom'
-import VideoRecorder from 'react-video-recorder'
+import VideoRecorder from 'react-video-recorder-custom'
 
 const App = () => (
   <VideoRecorder
@@ -81,6 +81,22 @@ Overlay that's rendered on top of the views and that contains the elements like 
 
 [See the default implementation here.](src/defaults/render-actions.js)
 
+#### Title Messages on Button
+
+##### Record Screen
+
+- Record Button: PRESS REC WHEN READY
+
+##### Stop Screen
+
+- Stop Button: STOP BUTTON
+
+##### Video Test and Check Screen
+
+- Record another Button: RECORD ANOTHER
+- Play Button(If Stopped): PLAY VIDEO
+- Pause Button(If Playing): PAUSE VIDEO
+
 ## Development
 
 Requirements
@@ -98,3 +114,5 @@ Run the storybook demo
 ```sh
 yarn start
 ```
+
+With help of `react-video-recorder package`

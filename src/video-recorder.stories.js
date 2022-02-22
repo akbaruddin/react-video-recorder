@@ -114,6 +114,25 @@ stories.add(
 )
 
 stories.add(
+  'with showReplayControls=true replayVideoAutoplayAndLoopOff=true with onCheckEnd with messages',
+  () => (
+    <VideoRecorder
+      isOnInitially
+      replayVideoAutoplayAndLoopOff
+      isReplayVideoInitiallyMuted={false}
+      onCheckEnd={() => {
+        console.log('Ended......')
+      }}
+      t={(m) => {
+        console.log(m)
+        return m
+      }}
+      {...actionLoggers}
+    />
+  )
+)
+
+stories.add(
   'with showReplayControls=true replayVideoAutoplayAndLoopOff=false',
   () => (
     <VideoRecorder
