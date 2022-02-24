@@ -131,7 +131,8 @@ export default class VideoRecorder extends Component {
     onOpenVideoInput: PropTypes.func,
     onStopReplaying: PropTypes.func,
     onError: PropTypes.func,
-    onCheckEnd: PropTypes.func
+    onCheckEnd: PropTypes.func,
+    onPreviewStart: PropTypes.func
   }
 
   static defaultProps = {
@@ -147,7 +148,8 @@ export default class VideoRecorder extends Component {
     constraints: CONSTRAINTS,
     chunkSize: 250,
     dataAvailableTimeout: 500,
-    onCheckEnd: () => {}
+    onCheckEnd: () => {},
+    onPreviewStart: () => {}
   }
 
   videoInput = React.createRef()
@@ -725,6 +727,7 @@ export default class VideoRecorder extends Component {
         isReplayVideoMuted: !this.state.isReplayVideoMuted
       })
     }
+    this.props.onPreviewStart()
   }
 
   handleStopVideoClick = () => {
