@@ -38,7 +38,7 @@ Button.defaultProps = {
 const RecordButton = ({ t, ...props }) => (
   <RecWrapper>
     <ButtonBorder>
-      <Button {...props} title={t('PRESS REC WHEN READY')}>
+      <Button {...props} data-title={t('PRESS REC WHEN READY')}>
         <svg
           width={24}
           xmlns='http://www.w3.org/2000/svg'

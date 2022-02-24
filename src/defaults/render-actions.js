@@ -84,7 +84,7 @@ const Actions = ({
             type='button'
             onClick={onStopReplaying}
             data-qa='start-replaying'
-            title={t('RECORD ANOTHER')}
+            data-title={t('RECORD ANOTHER')}
           >
             <svg
               width={24}
@@ -99,7 +99,7 @@ const Actions = ({
               type='button'
               onClick={handleReplayVideoClick}
               data-qa='start-playing'
-              title={t('PLAY VIDEO')}
+              data-title={t('PLAY VIDEO')}
             >
               <svg
                 width={24}
@@ -118,7 +118,7 @@ const Actions = ({
               type='button'
               onClick={handleStopVideoClick}
               data-qa='stop-playing'
-              title={t('PAUSE VIDEO')}
+              data-title={t('PAUSE VIDEO')}
             >
               <svg
                 width={24}
@@ -141,7 +141,7 @@ const Actions = ({
         <StopButton
           type='button'
           onClick={onStopRecording}
-          title={t('STOP BUTTON')}
+          data-title={t('STOP BUTTON')}
           data-qa='stop-recording'
         />
       )
