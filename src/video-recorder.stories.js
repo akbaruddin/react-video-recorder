@@ -36,7 +36,9 @@ const actionLoggers = {
   onRecordingComplete: handleRecordingComplete,
   onOpenVideoInput: action('onOpenVideoInput'),
   onStopReplaying: action('onStopReplaying'),
-  onError: action('onError')
+  onError: action('onError'),
+  onPreviewStart: action('onPreviewStart'),
+  onPreviewStop: action('onPreviewStop')
 }
 
 const stories = storiesOf('VideoRecorder', module)
