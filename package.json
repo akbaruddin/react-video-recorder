@@ -45,6 +45,7 @@
     "styled-components": "^5.3.3"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "react-svg-inline": "^2.1.0",
     "ts-ebml": "^2.0.2"
   },
@@ -92,7 +93,7 @@
     "start-server-and-test": "^1.7.11",
     "styled-components": "4"
   },
-  "version": "0.0.59",
+  "version": "0.0.60",
   "repository": {
     "type": "git",
     "url": "https://github.com/akbaruddin/react-video-recorder.git"

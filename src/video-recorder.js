@@ -178,6 +178,7 @@ export default class VideoRecorder extends Component {
   }
 
   componentDidMount () {
+    window.Buffer = window.Buffer || require('buffer').Buffer
     const isInlineRecordingSupported =
       !!window.MediaRecorder && !!navigator.mediaDevices
 
